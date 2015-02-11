@@ -11,6 +11,25 @@
     <link type="text/css" rel="stylesheet" href="~/Content/materialize/css/materialize.css" media="screen,projection" />
 </head>
 <body>
+    <!-- Facebook scripts -->
+    <script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '1455550488064137',
+            xfbml: true,
+            version: 'v2.2'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <!-- Navigation Bar -->
     <div class="navbar-fixed">
         <!-- Navigation for Desktop screens -->
@@ -150,7 +169,7 @@
             }
             );
             $(".button-collapse").sideNav();
-            $('.slider').slider({ full_width: true,  });         
+            $('.slider').slider({ full_width: true, height:300});         
         })
     </script>
 </body>

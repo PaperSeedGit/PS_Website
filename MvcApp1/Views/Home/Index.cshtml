@@ -10,7 +10,7 @@
         @foreach (var url in sliderUrls)
         {
             <li>
-                <img src= @url.Url > 
+                <img src= @url.Url style="height:100%;width:100%"> 
                 <div class="caption right-align">
                     <h3>@url.Title</h3>
                     <h5 class="light grey-text text-lighten-3">@url.SubTitle</h5>
@@ -36,7 +36,7 @@
                     <span class="card-title deep-orange-text"><i class="small mdi-action-face-unlock"></i>&nbsp;Free for Schools!</span>
                     <p>
                         We love our school days and our services are completly free for any school that do not have a website. 
-                        We will design your school website free of cost.  
+                        We will design a feature rich website for your school free of cost.  
                     </p>
                 </div>
                 <div class="card-action">
@@ -44,6 +44,11 @@
                         <div class="btn waves-effect waves-light orange" style="margin:1px">
                             Request for a free school website
                             <i class="mdi-content-send right"></i>
+                        </div>
+                        <div class="fb-like"
+                             data-share="false"
+                             data-width="450"
+                             data-show-faces="true">
                         </div>
                     </a>
                 </div>
@@ -87,7 +92,7 @@
                     </p>
                 </div>
                 <div class="card-action">
-                    <a href="Business/Technology">Know more</a>
+                    <a href="Business/Technology" style="color:antiquewhite">Know more</a>
                 </div>
             </div>
         </div>

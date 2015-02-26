@@ -4,49 +4,47 @@
     ViewBag.Title = "Log in";
 }
 
-<hgroup class="title">
-    <h4>@ViewBag.Title.</h4>
-</hgroup>
-
-<div class="container z-depth-1">
-    <div class="section" id="loginForm">
-        <h5>Use a local account to log in.</h5>
-        @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
-        {
-            @Html.AntiForgeryToken()
-            @Html.ValidationSummary(true)
-
-            <fieldset>
-                <legend>Log in Form</legend>
-                <ol>
-                    <li>
+<div class="container z-depth-1" style="background: url(/Images/leatherbg.jpg) no-repeat center center">
+    <div class="section" id="loginForm" style="width:300px;margin: 0px auto; padding:5px">
+        <fieldset style="background-color:white;">
+            <legend style="font-size:larger; font-weight:bolder">Login</legend>
+            @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+                
+                    <div>
                         @Html.LabelFor(m => m.UserName)
                         @Html.TextBoxFor(m => m.UserName)
-                        @Html.ValidationMessageFor(m => m.UserName)
-                    </li>
-                    <li>
+                        @Html.ValidationMessageFor(m => m.UserName, "", new { @style = "color:red" })
+                    </div>
+                    <div>
                         @Html.LabelFor(m => m.Password)
                         @Html.PasswordFor(m => m.Password)
-                        @Html.ValidationMessageFor(m => m.Password)
-                    </li>
-                    <li>
-                        @Html.CheckBoxFor(m => m.RememberMe)
-                        @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
-                    </li>
-                </ol>
-                <input type="submit" value="Log in" />
-            </fieldset>
-            <p>
-                @Html.ActionLink("Register", "Register") if you don't have an account.
-            </p>
-        }
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @style = "color:red" })
+                    </div>
+                    <div>
+                        @Html.CheckBoxFor(m => m.RememberMe, new { @style = "position:inherit" })
+                        @Html.LabelFor(m => m.RememberMe, new { })
+                    </div>
+
+                    <button class="btn waves-effect waves-light" type="submit" name="action" style="width:300px">
+                        Login
+                        <i class="mdi-content-send right"></i>
+                    </button>                    
+                
+            }
+            <div style="height: 1px; background-color: grey; text-align: center">
+                <span style="background-color: white; position: relative; top: -0.5em;">
+                    &nbsp; OR &nbsp;
+                </span>
+            </div>
+            <div class=" section social" id="socialLoginForm">
+                @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+            </div>
+            @Html.ActionLink("Register", "Register") if you don't have an account.
+        </fieldset>
     </div>
-
-    <section class=" section social" id="socialLoginForm">
-        <h5>Use another service to log in.</h5>
-        @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
-    </section>
-
 </div>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

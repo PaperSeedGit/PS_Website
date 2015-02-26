@@ -3,32 +3,42 @@
     ViewBag.Title = "Register";
 }
 
-<div class="container z-depth-1">
-    <h4>@ViewBag.Title.</h4>
+<div class="container z-depth-1" style="padding:5px">
     <h5>Create a new account.</h5>
         @using (Html.BeginForm())
         {
             @Html.AntiForgeryToken()
             @Html.ValidationSummary()
 
-            <fieldset>
-                <legend>Registration Form</legend>
-                <ol>
-                    <li>
-                        @Html.LabelFor(m => m.UserName)
-                        @Html.TextBoxFor(m => m.UserName)
-                    </li>
-                    <li>
-                        @Html.LabelFor(m => m.Password)
-                        @Html.PasswordFor(m => m.Password)
-                    </li>
-                    <li>
-                        @Html.LabelFor(m => m.ConfirmPassword)
-                        @Html.PasswordFor(m => m.ConfirmPassword)
-                    </li>
-                </ol>
-                <input type="submit" value="Register" />
-            </fieldset>
+    <fieldset style="background-color:white;padding-left:20px">
+        <legend style="font-weight:bolder">Register</legend>
+        <div>
+            <ul style="float:left;width:50%">
+                <li>
+                    @Html.LabelFor(m => m.UserName)
+                    @Html.TextBoxFor(m => m.UserName)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Password)
+                    @Html.PasswordFor(m => m.Password)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.ConfirmPassword)
+                    @Html.PasswordFor(m => m.ConfirmPassword)
+                </li>
+                <li>
+                    <button class="btn waves-effect waves-light" type="submit" name="action" style="width:300px">
+                        Register
+                        <i class="mdi-content-send right"></i>
+                    </button>
+                </li>
+            </ul>
+            <img alt="Register" src="~/Images/register.png" style="float:none; width:30%" />
+        </div>
+        @*<input type="submit" value="Register" />*@
+      
+
+    </fieldset>
         }
     </div>
         @section Scripts {

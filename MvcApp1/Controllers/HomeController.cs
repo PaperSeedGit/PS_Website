@@ -13,9 +13,9 @@ namespace MvcApp1.Controllers
             ViewBag.Message = "";
             List<SliderImage> SliderImages = new List<SliderImage>();
             SliderImages.Add(new SliderImage { Title = "Welcome to Paperseed!", SubTitle = "We build future web applications.", Url = "images/slider1.jpg" });
-            SliderImages.Add(new SliderImage { Title = "Intuitive UI", SubTitle = "We make websites simpler with esthetic user interface.", Url = "images/slider2.jpg" });
-            SliderImages.Add(new SliderImage { Title = "High quality code", SubTitle = "Robustness is our key when it comes to coding.", Url = "images/slider3.jpg" });
-            SliderImages.Add(new SliderImage { Title = "Extendable design", SubTitle = "We plan for your future from our first design draft.", Url = "images/slider4.jpg" });
+            SliderImages.Add(new SliderImage { Title = "Intuitive UI", SubTitle = "We make websites simpler with esthetic user interface.", Url = "images/slider1.jpg" });
+            SliderImages.Add(new SliderImage { Title = "High quality code", SubTitle = "Robustness is our key when it comes to coding.", Url = "images/slider1.jpg" });
+            SliderImages.Add(new SliderImage { Title = "Extendable design", SubTitle = "We plan for your future from our first design draft.", Url = "images/slider1.jpg" });
             
             ViewBag.SliderUrls = SliderImages; 
             return View();

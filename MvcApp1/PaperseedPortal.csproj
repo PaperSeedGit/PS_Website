@@ -293,6 +293,7 @@
     <Content Include="Content\materialize\README.md" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\leatherbg.jpg" />
+    <Content Include="Images\NewWorld.jpg" />
     <Content Include="Images\p1.jpg" />
     <Content Include="Images\p2.jpg" />
     <Content Include="Images\register.png" />
@@ -300,6 +301,8 @@
     <Content Include="Images\slider2.jpg" />
     <Content Include="Images\slider3.jpg" />
     <Content Include="Images\slider4.jpg" />
+    <Content Include="Images\small_brand_large_market.png" />
+    <Content Include="Images\UnknownWorld.jpg" />
     <Content Include="Images\woodbg.jpg" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
